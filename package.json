@@ -9,7 +9,7 @@
   "publishConfig": {
     "access": "public"
   },
-  "homepage": "https://profullstack.github.io/css/",
+  "homepage": "https://github.com/profullstack/css#readme",
   "repository": {
     "type": "git",
     "url": "https://github.com/profullstack/css.git"
@@ -23,6 +23,7 @@
     "examples/",
     "AGENTS.md",
     "README.md",
+    "CHANGELOG.md",
     "LICENSE"
   ],
   "exports": {

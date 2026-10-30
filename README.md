@@ -2,8 +2,7 @@
 
 **A calmer CSS contract for people and agents.**
 
-Source: https://github.com/profullstack/css  
-Live docs: https://profullstack.github.io/css/
+Project and source: https://github.com/profullstack/css
 
 Build accessible, responsive interfaces from semantic HTML. Get useful defaults for type, forms, tables, buttons, cards, and color themes without shipping a JavaScript runtime or learning a sprawling class vocabulary.
 
