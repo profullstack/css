@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Install and use Profullstack CSS: semantic defaults, layout patterns, components, tokens, and the agent contract.">
+    <title>Documentation — @profullstack/css</title>
+    <link rel="stylesheet" href="../css/profullstack.css">
+    <style>
+      .docs-top { border-bottom: 1px solid var(--pf-color-border); }
+      .docs-top-inner { align-items: center; display: flex; justify-content: space-between; min-height: 4.5rem; }
+      .docs-top a { text-decoration: none; }
+      .docs-layout { align-items: start; display: grid; gap: clamp(2rem, 6vw, 5rem); grid-template-columns: 12rem minmax(0, 1fr); padding-block: clamp(2rem, 6vw, 5rem); }
+      .docs-sidebar { position: sticky; top: 1rem; }
+      .docs-sidebar ul { border-inline-start: 1px solid var(--pf-color-border); list-style: none; margin: 0; padding: 0; }
+      .docs-sidebar a { color: var(--pf-color-ink-muted); display: block; font-size: var(--pf-text-sm); padding: 0.45rem 0 0.45rem 0.8rem; text-decoration: none; }
+      .docs-sidebar a:hover { color: var(--pf-color-primary); }
+      .docs-content { max-width: 54rem; min-width: 0; }
+      .docs-content > header { margin-bottom: 3rem; }
+      .docs-content > header h1 { font-size: clamp(2.5rem, 5vw, 4.2rem); }
+      .docs-content > header p:last-child { font-size: 1.1rem; max-width: 42rem; }
+      .docs-section { border-top: 1px solid var(--pf-color-border); margin-top: 3rem; padding-top: 2rem; scroll-margin-top: 1.5rem; }
+      .docs-section > h2 { margin-bottom: 1rem; }
+      .docs-section > p { max-width: 68ch; }
+      .code-sample { margin-block: 1rem; }
+      .code-sample code { font-size: 0.82rem; }
+      .command { background: var(--pf-color-surface-raised); border: 1px solid var(--pf-color-border); border-radius: var(--pf-radius-sm); display: block; overflow-x: auto; padding: 1rem; }
+      .layout-list { display: grid; gap: 0.65rem; grid-template-columns: repeat(2, minmax(0, 1fr)); margin-top: 1rem; }
+      .layout-list > div { border: 1px solid var(--pf-color-border); border-radius: var(--pf-radius-sm); padding: 0.8rem; }
+      .layout-list code { display: inline-block; margin-bottom: 0.3rem; }
+      .layout-list p { color: var(--pf-color-ink-muted); font-size: var(--pf-text-sm); }
+      .component-list { display: grid; gap: 1rem; grid-template-columns: repeat(2, minmax(0, 1fr)); margin-top: 1rem; }
+      .component-list .card { box-shadow: none; }
+      .component-list h3 { margin-bottom: 0.5rem; }
+      .token-grid { display: grid; gap: 0.5rem; grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .token-grid code { overflow-wrap: anywhere; }
+      .docs-footer { border-top: 1px solid var(--pf-color-border); padding-block: 1.5rem; }
+      .docs-footer .container { align-items: center; display: flex; justify-content: space-between; }
+      @media (max-width: 50rem) {
+        .docs-layout { grid-template-columns: 1fr; }
+        .docs-sidebar { overflow-x: auto; position: static; }
+        .docs-sidebar ul { border-inline-start: 0; border-bottom: 1px solid var(--pf-color-border); display: flex; gap: 1rem; min-width: max-content; }
+        .docs-sidebar a { padding: 0.5rem 0 0.7rem; }
+      }
+      @media (max-width: 35rem) {
+        .layout-list, .component-list, .token-grid { grid-template-columns: 1fr; }
+        .docs-footer .container { align-items: flex-start; flex-direction: column; gap: 0.5rem; }
+      }
+    </style>
+  </head>
+  <body>
+    <a class="sr-only" href="#content">Skip to documentation</a>
+    <header class="docs-top">
+      <div class="container docs-top-inner">
+        <a href="../index.html"><strong>@profullstack/css</strong></a>
+        <nav aria-label="Top navigation" class="cluster"><a href="../examples/">Examples</a><a href="https://github.com/profullstack/css">Source</a></nav>
+      </div>
+    </header>
+    <main class="container docs-layout" id="content">
+      <nav class="docs-sidebar" aria-label="Documentation sections">
+        <ul>
+          <li><a href="#install">Install</a></li>
+          <li><a href="#start">Quick start</a></li>
+          <li><a href="#layout">Layout</a></li>
+          <li><a href="#components">Components</a></li>
+          <li><a href="#themes">Themes</a></li>
+          <li><a href="#customize">Customize</a></li>
+          <li><a href="#agents">Agents</a></li>
+        </ul>
+      </nav>
+
+      <article class="docs-content">
+        <header class="stack" data-space="sm">
+          <p class="eyebrow">Documentation / 0.1.0</p>
+          <h1>Make the browser do more.</h1>
+          <p class="muted">A small stylesheet that starts with semantic HTML, gives it considered defaults, and makes its interface clear to the next person or agent who reads it.</p>
+        </header>
+
+        <section class="docs-section" id="install">
+          <h2>Install</h2>
+          <p>The source package is ready for its first public npm release. Until then, install from a local checkout:</p>
+          <pre class="command"><code>npm install /path/to/profullstack-css</code></pre>
+          <p>After publication, install the scoped package and import it from your global stylesheet:</p>
+          <pre class="command"><code>npm install @profullstack/css</code></pre>
+          <pre class="code-sample"><code>@import "@profullstack/css";</code></pre>
+          <p class="muted">The package is plain CSS: no runtime, JavaScript setup, or build step of its own.</p>
+        </section>
+
+        <section class="docs-section" id="start">
+          <h2>Quick start</h2>
+          <p>Use native elements first. Add layout classes only where structure needs a name.</p>
+          <pre class="code-sample"><code>&lt;main class="container stack section"&gt;
+  &lt;header class="stack" data-space="sm"&gt;
+    &lt;p class="eyebrow"&gt;Workspace&lt;/p&gt;
+    &lt;h1&gt;Good morning, Alex.&lt;/h1&gt;
+    &lt;p class="muted"&gt;Here’s what needs your attention.&lt;/p&gt;
+  &lt;/header&gt;
+
+  &lt;section class="grid" data-columns="2" aria-label="Summary"&gt;
+    &lt;article class="card stack" data-space="sm"&gt;
+      &lt;h2&gt;Projects&lt;/h2&gt;
+      &lt;p&gt;12 active projects&lt;/p&gt;
+    &lt;/article&gt;
+  &lt;/section&gt;
+&lt;/main&gt;</code></pre>
+        </section>
+
+        <section class="docs-section" id="layout">
+          <h2>Layout vocabulary</h2>
+          <p>These are the framework’s complete layout primitives. Responsive behavior is built in; use attributes for the few intentional variations.</p>
+          <div class="layout-list">
+            <div><code>.container</code><p>Centered page width with responsive gutters.</p></div>
+            <div><code>.prose</code><p>Readable line length for long-form text.</p></div>
+            <div><code>.stack</code><p>Vertical flow. <code>data-space="sm|lg"</code> adjusts its gap.</p></div>
+            <div><code>.cluster</code><p>Wrapping row for controls, labels, and navigation.</p></div>
+            <div><code>.grid</code><p>Responsive grid. <code>data-columns="2|3|4"</code> sets desktop columns.</p></div>
+            <div><code>.split</code><p>Two-column composition that collapses on narrow screens.</p></div>
+            <div><code>.section</code><p>Responsive vertical page-section spacing.</p></div>
+          </div>
+        </section>
+
+        <section class="docs-section" id="components">
+          <h2>Components</h2>
+          <p>Native controls are styled automatically. Use the small component classes for visual roles that HTML does not express on its own.</p>
+          <div class="component-list">
+            <article class="card stack" data-space="sm"><h3>Buttons</h3><p>Native <code>&lt;button&gt;</code> is styled by default. Add <code>.button</code> to a link, then choose <code>data-variant="secondary|ghost|danger"</code> if needed.</p><button type="button" data-variant="secondary">Secondary action</button></article>
+            <article class="card stack" data-space="sm"><h3>Cards and status</h3><p>Use <code>.card</code>, <code>.alert</code>, and <code>.badge</code> when a bordered surface or status label clarifies the content.</p><div class="cluster"><span class="badge" data-tone="success">Ready</span><span class="badge" data-tone="warning">Review</span></div></article>
+            <article class="card stack" data-space="sm"><h3>Forms</h3><p>Label each control. Connect helper and error text with <code>aria-describedby</code>; mark invalid input with <code>aria-invalid="true"</code>.</p><label for="docs-email">Work email</label><input id="docs-email" type="email" placeholder="you@example.com"></article>
+            <article class="card stack" data-space="sm"><h3>Native patterns</h3><p>Tables, <code>details</code>, progress, meter, and <code>dialog</code> receive baseline styles. Native behavior remains with the browser or your application.</p><details><summary>Show details</summary><p>Disclosure requires no JavaScript.</p></details></article>
+          </div>
+        </section>
+
+        <section class="docs-section" id="themes">
+          <h2>Color themes</h2>
+          <p>Without an explicit choice, colors follow <code>prefers-color-scheme</code>. Set one attribute on the root element to choose a theme:</p>
+          <pre class="code-sample"><code>&lt;html lang="en" data-theme="dark"&gt;</code></pre>
+          <p>Supported values are <code>light</code> and <code>dark</code>. The application owns the setting control and persistence; CSS supplies the palette.</p>
+        </section>
+
+        <section class="docs-section" id="customize">
+          <h2>Customize with tokens</h2>
+          <p>Override the <code>--pf-*</code> variables after importing the framework. The actual values live in <code>css/tokens.css</code>; the JSON catalog lists theme values and token names for tools.</p>
+          <pre class="code-sample"><code>:root {
+  --pf-color-primary: #4a42c4;
+  --pf-color-primary-hover: #3932a5;
+  --pf-radius-md: 1rem;
+  --pf-content-width: 78rem;
+}</code></pre>
+          <div class="token-grid">
+            <code>--pf-color-primary</code><code>--pf-space-4</code>
+            <code>--pf-font-sans</code><code>--pf-radius-md</code>
+            <code>--pf-content-width</code><code>--pf-control-height</code>
+          </div>
+        </section>
+
+        <section class="docs-section" id="agents">
+          <h2>Give agents the contract</h2>
+          <p>The package includes a short <code>AGENTS.md</code> and <code>css/manifest.json</code>. The first describes markup and accessibility rules; the second lists supported classes, variants, tokens, themes, and snippets in machine-readable form.</p>
+          <div class="cluster">
+            <a class="button" href="../css/manifest.json">Open manifest</a>
+            <a class="button" data-variant="secondary" href="agent-guide.md">Read agent guide</a>
+          </div>
+          <p class="muted">When a pattern is missing, compose native HTML and existing tokens instead of inventing an undocumented class.</p>
+        </section>
+      </article>
+    </main>
+    <footer class="docs-footer"><div class="container"><span class="muted">@profullstack/css · MIT licensed</span><a href="../index.html">Back to overview ↑</a></div></footer>
+  </body>
+</html>

@@ -1,0 +1,81 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "name": "@profullstack/css",
+  "contractVersion": "1.0.0",
+  "description": "A semantic-first CSS contract for people and code-generating agents.",
+  "entrypoints": {
+    "default": "@profullstack/css",
+    "tokens": "@profullstack/css/tokens",
+    "manifest": "@profullstack/css/manifest"
+  },
+  "agentGuide": "AGENTS.md",
+  "principles": [
+    "Use native HTML elements before adding classes.",
+    "Use documented classes and data attributes only.",
+    "Use real buttons for actions and links for navigation.",
+    "Keep labels, accessible names, and status text in the markup.",
+    "Use the provided design tokens for custom styling."
+  ],
+  "layout": {
+    "container": { "class": "container", "purpose": "Centered responsive page width." },
+    "prose": { "class": "prose", "purpose": "Readable measure for long text." },
+    "stack": { "class": "stack", "attributes": { "data-space": ["sm", "lg"] }, "purpose": "Vertical flow with consistent gaps." },
+    "cluster": { "class": "cluster", "purpose": "Wrapping horizontal group with aligned items." },
+    "grid": { "class": "grid", "attributes": { "data-columns": ["2", "3", "4"] }, "purpose": "Responsive card or content grid." },
+    "split": { "class": "split", "purpose": "Two-column content that collapses on small screens." },
+    "section": { "class": "section", "purpose": "Responsive vertical section spacing." }
+  },
+  "components": {
+    "button": {
+      "elements": ["button", "a.button"],
+      "variants": ["secondary", "ghost", "danger"],
+      "example": "<button type=\"button\" data-variant=\"secondary\">Cancel</button>"
+    },
+    "card": {
+      "class": "card",
+      "example": "<article class=\"card stack\"><h2>Heading</h2><p>Supporting text.</p></article>"
+    },
+    "alert": {
+      "class": "alert",
+      "tones": ["info", "success", "warning", "danger"],
+      "example": "<p class=\"alert\" role=\"status\">Changes saved.</p>"
+    },
+    "badge": {
+      "class": "badge",
+      "tones": ["neutral", "success", "warning", "danger"],
+      "example": "<span class=\"badge\" data-tone=\"success\">Active</span>"
+    },
+    "form": {
+      "nativeElements": ["label", "input", "select", "textarea", "fieldset", "legend"],
+      "validation": "Set aria-invalid=\"true\" on an invalid field and connect help text with aria-describedby."
+    },
+    "disclosure": {
+      "elements": ["details", "summary"],
+      "example": "<details><summary>More details</summary><p>Additional information.</p></details>"
+    },
+    "table": {
+      "elements": ["table", "caption", "thead", "tbody", "th", "td"],
+      "rule": "Use a caption and scope row or column header cells."
+    },
+    "dialog": {
+      "element": "dialog",
+      "rule": "Use the native dialog API to open it; this stylesheet does not add behavior."
+    }
+  },
+  "tokens": {
+    "file": "css/tokens.css",
+    "prefix": "--pf-",
+    "groups": ["color", "shadow", "radius", "space", "font", "text", "leading", "content", "control", "transition"]
+  },
+  "themes": {
+    "automatic": "Follows prefers-color-scheme.",
+    "light": "Set data-theme=\"light\" on the html element.",
+    "dark": "Set data-theme=\"dark\" on the html element."
+  },
+  "behavior": {
+    "javascriptIncluded": false,
+    "runtimeDependencies": [],
+    "motionPreference": "Respects prefers-reduced-motion.",
+    "focus": "Provides visible :focus-visible outlines."
+  }
+}

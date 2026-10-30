@@ -1,0 +1,96 @@
+@layer pf.tokens {
+  :root {
+    color-scheme: light dark;
+    --pf-color-canvas: #f7f8fa;
+    --pf-color-surface: #ffffff;
+    --pf-color-surface-raised: #ffffff;
+    --pf-color-ink: #14212b;
+    --pf-color-ink-muted: #53616c;
+    --pf-color-border: #d9e0e6;
+    --pf-color-primary: #126b55;
+    --pf-color-primary-hover: #0d5846;
+    --pf-color-on-primary: #ffffff;
+    --pf-color-accent: #f0a54a;
+    --pf-color-danger: #b42332;
+    --pf-color-success: #176b45;
+    --pf-color-warning: #8a4b00;
+    --pf-color-info: #175f9b;
+    --pf-color-focus: #126b55;
+    --pf-shadow-sm: 0 1px 2px rgb(15 32 43 / 8%);
+    --pf-shadow-md: 0 14px 38px rgb(15 32 43 / 10%);
+    --pf-radius-sm: 0.5rem;
+    --pf-radius-md: 0.85rem;
+    --pf-radius-lg: 1.25rem;
+    --pf-radius-pill: 999px;
+    --pf-space-1: 0.25rem;
+    --pf-space-2: 0.5rem;
+    --pf-space-3: 0.75rem;
+    --pf-space-4: 1rem;
+    --pf-space-5: 1.5rem;
+    --pf-space-6: 2rem;
+    --pf-space-7: 3rem;
+    --pf-space-8: 4rem;
+    --pf-font-sans: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    --pf-font-mono: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+    --pf-text-xs: 0.78rem;
+    --pf-text-sm: 0.9rem;
+    --pf-text-md: 1rem;
+    --pf-text-lg: 1.2rem;
+    --pf-text-xl: clamp(1.6rem, 3vw, 2.4rem);
+    --pf-text-display: clamp(2.5rem, 6vw, 5.5rem);
+    --pf-leading-tight: 1.08;
+    --pf-leading-normal: 1.6;
+    --pf-content-width: 72rem;
+    --pf-prose-width: 68ch;
+    --pf-control-height: 2.8rem;
+    --pf-transition-fast: 140ms ease;
+    --pf-transition-normal: 220ms ease;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --pf-color-canvas: #101719;
+      --pf-color-surface: #172123;
+      --pf-color-surface-raised: #1d2a2c;
+      --pf-color-ink: #eaf2ef;
+      --pf-color-ink-muted: #afbfba;
+      --pf-color-border: #354648;
+      --pf-color-primary: #6fd0aa;
+      --pf-color-primary-hover: #89e2bb;
+      --pf-color-on-primary: #0d2920;
+      --pf-color-accent: #ffc36d;
+      --pf-color-danger: #ff8d98;
+      --pf-color-success: #79d6a7;
+      --pf-color-warning: #ffcb78;
+      --pf-color-info: #8fc8ff;
+      --pf-color-focus: #89e2bb;
+      --pf-shadow-sm: 0 1px 2px rgb(0 0 0 / 25%);
+      --pf-shadow-md: 0 14px 38px rgb(0 0 0 / 25%);
+    }
+  }
+
+  :root[data-theme="light"] {
+    color-scheme: light;
+  }
+
+  :root[data-theme="dark"] {
+    color-scheme: dark;
+    --pf-color-canvas: #101719;
+    --pf-color-surface: #172123;
+    --pf-color-surface-raised: #1d2a2c;
+    --pf-color-ink: #eaf2ef;
+    --pf-color-ink-muted: #afbfba;
+    --pf-color-border: #354648;
+    --pf-color-primary: #6fd0aa;
+    --pf-color-primary-hover: #89e2bb;
+    --pf-color-on-primary: #0d2920;
+    --pf-color-accent: #ffc36d;
+    --pf-color-danger: #ff8d98;
+    --pf-color-success: #79d6a7;
+    --pf-color-warning: #ffcb78;
+    --pf-color-info: #8fc8ff;
+    --pf-color-focus: #89e2bb;
+    --pf-shadow-sm: 0 1px 2px rgb(0 0 0 / 25%);
+    --pf-shadow-md: 0 14px 38px rgb(0 0 0 / 25%);
+  }
+}

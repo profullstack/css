@@ -1,0 +1,200 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="color-scheme" content="light dark">
+    <meta name="description" content="A semantic CSS framework with a small, predictable contract for humans and code-generating agents.">
+    <meta property="og:title" content="Profullstack CSS — one stylesheet, less guesswork">
+    <meta property="og:description" content="Semantic CSS with a small, predictable contract for humans and agents.">
+    <meta property="og:url" content="https://profullstack.github.io/css/">
+    <meta property="og:type" content="website">
+    <title>Profullstack CSS — one stylesheet, less guesswork</title>
+    <link rel="stylesheet" href="css/profullstack.css">
+    <link rel="stylesheet" href="site.css">
+  </head>
+  <body>
+    <header class="topbar">
+      <div class="container cluster topbar-inner">
+        <a class="wordmark" href="#top" aria-label="Profullstack CSS home"><span class="wordmark-icon" aria-hidden="true">/</span> profullstack<span class="wordmark-suffix">.css</span></a>
+        <nav aria-label="Main navigation">
+          <ul class="cluster nav-list" role="list">
+            <li><a href="#why">Why this</a></li>
+            <li><a href="#contract">Agent contract</a></li>
+            <li><a href="docs/">Docs</a></li>
+          </ul>
+        </nav>
+        <a class="button topbar-cta" href="#start">Get started <span aria-hidden="true">↗</span></a>
+      </div>
+    </header>
+
+    <main id="top">
+      <section class="hero container section split">
+        <div class="hero-copy stack">
+          <p class="eyebrow"><span class="status-dot" aria-hidden="true"></span> CSS for the human + agent loop</p>
+          <h1>One stylesheet.<br><span class="highlight">A lot less guesswork.</span></h1>
+          <p class="hero-lede">A small, semantic CSS framework for people who care about the markup and agents that need it to make sense.</p>
+          <div class="cluster hero-actions">
+            <a class="button" href="#start">Get the starter <span aria-hidden="true">→</span></a>
+            <a class="button" data-variant="secondary" href="#contract">See the contract</a>
+          </div>
+          <p class="hero-note">No runtime. No magic. Just HTML with good taste.</p>
+        </div>
+
+        <figure class="preview-frame">
+          <figcaption class="sr-only">Dashboard preview showing semantic HTML styled by Profullstack CSS.</figcaption>
+          <div class="preview-window">
+            <div class="preview-chrome"><div class="window-dots" aria-hidden="true"><i></i><i></i><i></i></div><span>your-next-page.html</span><span class="preview-live"><i></i> live</span></div>
+            <div class="preview-body stack">
+              <div class="preview-greeting"><div><p class="eyebrow">YOUR WORKSPACE / THIS WEEK</p><h2>Good morning, Maya.</h2><p class="muted">Here’s what’s happening today.</p></div><span class="avatar" aria-hidden="true">MC</span></div>
+              <div class="preview-stats grid" data-columns="3">
+                <article class="mini-stat"><span class="stat-label">Projects</span><strong>12</strong><span class="stat-delta">↗ 2 this week</span></article>
+                <article class="mini-stat"><span class="stat-label">Reviews</span><strong>04</strong><span class="stat-delta">All on track</span></article>
+                <article class="mini-stat"><span class="stat-label">Ship rate</span><strong>96<span>%</span></strong><span class="stat-delta">↗ 8% this month</span></article>
+              </div>
+              <article class="preview-task card">
+                <div><span class="badge" data-tone="success">On track</span><h3>New onboarding flow</h3><p class="muted">Design handoff · Updated 12 min ago</p></div>
+                <a class="button" href="#start" aria-label="Open new onboarding flow">Open <span aria-hidden="true">↗</span></a>
+              </article>
+              <div class="preview-footer"><span><i class="tiny-spark" aria-hidden="true">✳</i> Built with plain HTML</span><code>0 JS dependencies</code></div>
+            </div>
+          </div>
+          <div class="orbit-note orbit-note-one"><span>01</span> semantic by default</div>
+          <div class="orbit-note orbit-note-two"><span>02</span> readable at a glance</div>
+        </figure>
+      </section>
+
+      <section class="signal-band" aria-label="Framework facts">
+        <div class="container signal-grid">
+          <div><strong>0</strong><span>runtime dependencies</span></div>
+          <div><strong>1</strong><span>stylesheet to start</span></div>
+          <div><strong>∞</strong><span>ways to make it yours</span></div>
+          <p>Built for the speed of now<br><span>and the maintenance of later.</span></p>
+        </div>
+      </section>
+
+      <section class="container section why-section" id="why">
+        <header class="section-heading stack" data-space="sm">
+          <p class="eyebrow">A better starting point</p>
+          <h2>Good HTML deserves<br>good defaults.</h2>
+          <p class="muted">Your interface shouldn't need a utility-class novel or a hydration budget just to look considered.</p>
+        </header>
+        <div class="grid feature-grid" data-columns="3">
+          <article class="feature-card stack">
+            <span class="feature-number">01 / USE THE PLATFORM</span>
+            <div class="feature-icon icon-html" aria-hidden="true">&lt;/&gt;</div>
+            <h3>Semantic first</h3>
+            <p>Use real buttons, labels, tables, and disclosures. The browser already knows how they work.</p>
+          </article>
+          <article class="feature-card stack">
+            <span class="feature-number">02 / KEEP IT LEGIBLE</span>
+            <div class="feature-icon icon-token" aria-hidden="true">✳</div>
+            <h3>Small vocabulary</h3>
+            <p>Seven layout primitives. A handful of components. Names you can remember without a lookup tab.</p>
+          </article>
+          <article class="feature-card stack">
+            <span class="feature-number">03 / SHIP YOUR ACTUAL APP</span>
+            <div class="feature-icon icon-js" aria-hidden="true">{ }</div>
+            <h3>CSS means CSS</h3>
+            <p>Theme-aware, responsive styles with no runtime or build step required. Add behavior only when you need it.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="contract-section" id="contract">
+        <div class="container section split contract-layout">
+          <div class="contract-copy stack">
+            <p class="eyebrow">A contract your agent can follow</p>
+            <h2>Fewer invented classes.<br><span class="highlight">More shipped screens.</span></h2>
+            <p>Every supported pattern has one documented spelling. The manifest gives agents a bounded set of building blocks, so your first draft looks closer to the thing you asked for.</p>
+            <ul class="contract-points stack" role="list">
+              <li><span aria-hidden="true">✓</span><span><strong>Finite, searchable vocabulary</strong><br>Classes, variants, themes, and examples in JSON.</span></li>
+              <li><span aria-hidden="true">✓</span><span><strong>Human-readable guardrails</strong><br>A project-ready AGENTS.md included in the package.</span></li>
+              <li><span aria-hidden="true">✓</span><span><strong>Native behavior stays native</strong><br>CSS styles the controls; your app owns the logic.</span></li>
+            </ul>
+            <a class="text-link" href="css/manifest.json">Read the machine-readable contract <span aria-hidden="true">→</span></a>
+          </div>
+          <div class="code-card">
+            <div class="code-card-top"><span>agent knows the rules</span><span class="code-lang">JSON</span></div>
+            <pre><code><span class="code-muted">{</span>
+  <span class="code-key">"layout"</span>: <span class="code-muted">{</span>
+    <span class="code-key">"stack"</span>: <span class="code-muted">{</span>
+      <span class="code-key">"class"</span>: <span class="code-string">"stack"</span>,
+      <span class="code-key">"data-space"</span>: [
+        <span class="code-string">"sm"</span>, <span class="code-string">"lg"</span>
+      ]
+    <span class="code-muted">}</span>,
+    <span class="code-key">"grid"</span>: <span class="code-muted">{</span>
+      <span class="code-key">"class"</span>: <span class="code-string">"grid"</span>,
+      <span class="code-key">"data-columns"</span>: [
+        <span class="code-string">"2"</span>, <span class="code-string">"3"</span>, <span class="code-string">"4"</span>
+      ]
+    <span class="code-muted">}</span>
+  <span class="code-muted">}</span>,
+  <span class="code-key">"guessing"</span>: <span class="code-bool">false</span>
+<span class="code-muted">}</span></code></pre>
+            <div class="code-card-bottom"><span class="tiny-spark" aria-hidden="true">✳</span> Predictable for machines. Readable for people.</div>
+          </div>
+        </div>
+      </section>
+
+      <section class="container section craft-section">
+        <div class="craft-heading cluster">
+          <div class="stack" data-space="sm"><p class="eyebrow">Thoughtful out of the box</p><h2>Comes with the<br>boring bits handled.</h2></div>
+          <p class="muted">So you can spend your attention on the details that make a product feel like yours.</p>
+        </div>
+        <div class="grid craft-grid" data-columns="2">
+          <article class="craft-card stack">
+            <div class="craft-card-head cluster"><span class="craft-emoji" aria-hidden="true">◐</span><span class="badge">THEME</span></div>
+            <h3>Light, dark, and your call</h3>
+            <p>Follows the system preference automatically, with a single attribute to set the theme yourself.</p>
+            <div class="theme-demo"><span class="theme-swatch light-swatch">Light</span><span class="theme-swatch dark-swatch">Dark</span><code>data-theme="dark"</code></div>
+          </article>
+          <article class="craft-card stack">
+            <div class="craft-card-head cluster"><span class="craft-emoji" aria-hidden="true">⌘</span><span class="badge">ACCESSIBILITY</span></div>
+            <h3>Accessible starts here</h3>
+            <p>Visible keyboard focus, semantic controls, high-contrast states, and reduced-motion support come standard.</p>
+            <div class="focus-demo"><span class="focus-ring" aria-hidden="true">Tab focus</span><span class="muted">Clearly in view</span></div>
+          </article>
+          <article class="craft-card stack">
+            <div class="craft-card-head cluster"><span class="craft-emoji" aria-hidden="true">↗</span><span class="badge">RESPONSIVE</span></div>
+            <h3>Fits the screen you're on</h3>
+            <p>Fluid type, flexible grids, and layouts that collapse naturally. No breakpoint class scavenger hunt.</p>
+            <div class="responsive-demo" aria-hidden="true"><i></i><i></i><i></i></div>
+          </article>
+          <article class="craft-card stack">
+            <div class="craft-card-head cluster"><span class="craft-emoji" aria-hidden="true">◎</span><span class="badge">CUSTOMIZABLE</span></div>
+            <h3>Your palette, your product</h3>
+            <p>Override a small set of named CSS variables. Keep your design choices close to the code that uses them.</p>
+            <div class="palette-demo" aria-label="Color token examples"><i></i><i></i><i></i><i></i><code>--pf-color-primary</code></div>
+          </article>
+        </div>
+      </section>
+
+      <section class="start-section" id="start">
+        <div class="container section start-layout split">
+          <div class="stack">
+            <p class="eyebrow">Your next screen starts here</p>
+            <h2>Write the HTML.<br>Let it look like you meant it.</h2>
+            <p>Install the package, import one file, and keep building in the language the web already speaks.</p>
+            <div class="cluster start-actions"><a class="button" href="docs/">Read the guide <span aria-hidden="true">→</span></a><a class="text-link" href="examples/">Browse examples ↗</a></div>
+          </div>
+          <div class="install-panel">
+            <p class="eyebrow">Start in two lines</p>
+            <pre><code><span class="code-muted">$</span> npm install @profullstack/css</code></pre>
+            <pre><code><span class="code-key">@import</span> <span class="code-string">"@profullstack/css"</span>;</code></pre>
+            <p class="install-note">The 0.1.0 source package is ready for its first public release. Until then, install a local checkout.</p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container footer-inner cluster">
+        <a class="wordmark" href="#top"><span class="wordmark-icon" aria-hidden="true">/</span> profullstack<span class="wordmark-suffix">.css</span></a>
+        <p>Made for humans. Legible to machines. MIT licensed.</p>
+        <nav aria-label="Footer navigation"><ul class="cluster" role="list"><li><a href="https://github.com/profullstack/css">GitHub</a></li><li><a href="docs/">Docs</a></li><li><a href="css/manifest.json">Manifest</a></li></ul></nav>
+      </div>
+    </footer>
+  </body>
+</html>

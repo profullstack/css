@@ -1,0 +1,42 @@
+{
+  "name": "@profullstack/css",
+  "version": "0.1.0",
+  "description": "A semantic, agent-friendly CSS foundation for real interfaces.",
+  "license": "MIT",
+  "type": "module",
+  "style": "./css/profullstack.css",
+  "sideEffects": ["*.css"],
+  "publishConfig": {
+    "access": "public"
+  },
+  "homepage": "https://profullstack.github.io/css/",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/profullstack/css.git"
+  },
+  "bugs": {
+    "url": "https://github.com/profullstack/css/issues"
+  },
+  "files": [
+    "css/",
+    "docs/",
+    "examples/",
+    "AGENTS.md",
+    "README.md",
+    "LICENSE"
+  ],
+  "exports": {
+    ".": "./css/profullstack.css",
+    "./css": "./css/profullstack.css",
+    "./tokens": "./css/tokens.css",
+    "./manifest": "./css/manifest.json"
+  },
+  "keywords": [
+    "css",
+    "css-framework",
+    "semantic-html",
+    "accessible",
+    "agent-friendly",
+    "design-system"
+  ]
+}

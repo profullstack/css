@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Projects — @profullstack/css example</title>
+    <link rel="stylesheet" href="../css/profullstack.css">
+    <style>
+      .app-header { border-bottom: 1px solid var(--pf-color-border); }
+      .app-header .container { align-items: center; display: flex; justify-content: space-between; min-height: 4.5rem; }
+      .app-header a { text-decoration: none; }
+      .main-content { padding-block: clamp(2rem, 6vw, 4.5rem); }
+      .page-heading, .table-heading { align-items: end; justify-content: space-between; }
+      .metric { display: flex; flex-direction: column; gap: 0.35rem; }
+      .metric strong { font-size: clamp(1.8rem, 4vw, 2.7rem); letter-spacing: -0.06em; line-height: 1; }
+      .metric span { color: var(--pf-color-ink-muted); font-size: var(--pf-text-sm); }
+      .table-wrap { overflow-x: auto; }
+      .table-wrap table { min-width: 40rem; }
+      .project-name { font-weight: 650; }
+    </style>
+  </head>
+  <body>
+    <header class="app-header">
+      <div class="container">
+        <a href="index.html"><strong>Fieldnotes</strong></a>
+        <nav aria-label="Main navigation">
+          <ul class="cluster" role="list">
+            <li><a href="#projects" aria-current="page">Projects</a></li>
+            <li><a href="invite-form.html">Team</a></li>
+          </ul>
+        </nav>
+        <a class="button" href="invite-form.html">Invite teammate</a>
+      </div>
+    </header>
+    <main class="container stack main-content">
+      <header class="cluster page-heading">
+        <div class="stack" data-space="sm">
+          <p class="eyebrow">Workspace / Projects</p>
+          <h1>Project overview</h1>
+          <p class="muted">A clear view of what's moving and what needs you.</p>
+        </div>
+        <a class="button" href="invite-form.html">New project <span aria-hidden="true">＋</span></a>
+      </header>
+
+      <section class="grid" data-columns="3" aria-label="Workspace metrics">
+        <article class="card metric"><span>Active projects</span><strong>12</strong><span>2 added this month</span></article>
+        <article class="card metric"><span>Awaiting review</span><strong>03</strong><span>Oldest request: 1 day</span></article>
+        <article class="card metric"><span>Completed this quarter</span><strong>28</strong><span>4 more than last quarter</span></article>
+      </section>
+
+      <section class="stack" id="projects">
+        <div class="cluster table-heading">
+          <h2>Recent projects</h2>
+          <a href="#projects">View all projects →</a>
+        </div>
+        <div class="card table-wrap">
+          <table>
+            <caption>Project status updated October 30, 2026</caption>
+            <thead><tr><th scope="col">Project</th><th scope="col">Owner</th><th scope="col">Status</th><th scope="col">Updated</th></tr></thead>
+            <tbody>
+              <tr><th scope="row" class="project-name">Customer portal</th><td>Alex Morgan</td><td><span class="badge" data-tone="success">On track</span></td><td>12 minutes ago</td></tr>
+              <tr><th scope="row" class="project-name">Mobile checkout</th><td>Riley Chen</td><td><span class="badge" data-tone="warning">Needs review</span></td><td>Yesterday</td></tr>
+              <tr><th scope="row" class="project-name">Usage insights</th><td>Jordan Lee</td><td><span class="badge">Planning</span></td><td>October 27</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <p class="alert" role="status" data-tone="success">All project data is up to date.</p>
+    </main>
+  </body>
+</html>

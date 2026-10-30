@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Examples — @profullstack/css</title>
+    <link rel="stylesheet" href="../css/profullstack.css">
+    <style>
+      .example-nav { border-bottom: 1px solid var(--pf-color-border); padding-block: 1rem; }
+      .example-nav .container { align-items: center; display: flex; justify-content: space-between; }
+      .example-nav a { text-decoration: none; }
+      .example-main { padding-block: clamp(3rem, 8vw, 6rem); }
+      .example-link { align-items: flex-start; text-decoration: none; }
+      .example-link h2 { color: var(--pf-color-primary); }
+      .example-link:hover { border-color: var(--pf-color-primary); transform: translateY(-2px); }
+    </style>
+  </head>
+  <body>
+    <header class="example-nav">
+      <div class="container"><a href="../index.html"><strong>@profullstack/css</strong></a><a href="../README.md">Read the guide →</a></div>
+    </header>
+    <main class="container stack example-main">
+      <header class="stack" data-space="sm">
+        <p class="eyebrow">Patterns you can use</p>
+        <h1>Examples, in plain HTML.</h1>
+        <p class="muted prose">Each page uses the framework's documented classes and semantic elements. No JavaScript is included.</p>
+      </header>
+      <section class="grid" data-columns="2" aria-label="Example pages">
+        <a class="card stack example-link" href="project-dashboard.html">
+          <span class="badge">LAYOUT + TABLE</span>
+          <h2>Project dashboard ↗</h2>
+          <p class="muted">A responsive dashboard with summary cards, a semantic table, and status badges.</p>
+        </a>
+        <a class="card stack example-link" href="invite-form.html">
+          <span class="badge">FORMS + STATES</span>
+          <h2>Invite a teammate ↗</h2>
+          <p class="muted">A labeled form with native controls, helper text, validation messaging, and button variants.</p>
+        </a>
+      </section>
+    </main>
+  </body>
+</html>

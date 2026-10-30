@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Invite a teammate — @profullstack/css example</title>
+    <link rel="stylesheet" href="../css/profullstack.css">
+    <style>
+      .form-page { min-height: 100vh; padding-block: 1.25rem 4rem; }
+      .form-top { align-items: center; display: flex; justify-content: space-between; }
+      .form-main { margin-inline: auto; max-width: 42rem; padding-top: clamp(3rem, 9vw, 7rem); }
+      .field { display: grid; gap: 0.35rem; }
+      .field label { margin-bottom: 0; }
+      .field small { color: var(--pf-color-ink-muted); }
+      .field-error { color: var(--pf-color-danger) !important; }
+      .form-actions { border-top: 1px solid var(--pf-color-border); margin-top: 0.5rem; padding-top: 1.25rem; }
+    </style>
+  </head>
+  <body>
+    <main class="container form-page">
+      <header class="form-top"><a href="index.html"><strong>Fieldnotes</strong></a><a href="project-dashboard.html">← Back to projects</a></header>
+      <div class="form-main stack">
+        <header class="stack" data-space="sm">
+          <p class="eyebrow">Workspace / Team</p>
+          <h1>Invite a teammate</h1>
+          <p class="muted">Give someone a seat at the table. You can change their access later.</p>
+        </header>
+
+        <p class="alert" role="status">Your workspace has 4 seats available.</p>
+
+        <form class="stack" action="/api/invitations" method="post">
+          <div class="field">
+            <label for="full-name">Full name</label>
+            <input id="full-name" name="name" autocomplete="name" placeholder="Sam Rivera" required>
+          </div>
+
+          <div class="field">
+            <label for="work-email">Work email</label>
+            <input id="work-email" name="email" type="email" autocomplete="email" placeholder="sam@company.com" aria-describedby="email-hint" required>
+            <small id="email-hint">We'll send their invitation to this address.</small>
+          </div>
+
+          <div class="field">
+            <label for="role">Role</label>
+            <select id="role" name="role" aria-describedby="role-hint">
+              <option value="member">Member — can work on projects</option>
+              <option value="admin">Admin — can manage the workspace</option>
+              <option value="viewer">Viewer — can read project updates</option>
+            </select>
+            <small id="role-hint">Choose the access that fits their work.</small>
+          </div>
+
+          <fieldset class="stack" data-space="sm">
+            <legend>Optional message</legend>
+            <label for="message">Personal note</label>
+            <textarea id="message" name="message" rows="4" placeholder="A sentence to make the invite feel personal."></textarea>
+          </fieldset>
+
+          <div class="cluster form-actions">
+            <button type="submit">Send invitation</button>
+            <a class="button" data-variant="secondary" href="project-dashboard.html">Cancel</a>
+          </div>
+        </form>
+
+        <details>
+          <summary>What happens next?</summary>
+          <p class="muted">Your teammate receives an email with a secure invitation link. This example form does not send data; connect it to your app's invite endpoint.</p>
+        </details>
+      </div>
+    </main>
+  </body>
+</html>
